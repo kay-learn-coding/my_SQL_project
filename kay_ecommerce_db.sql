@@ -22,7 +22,7 @@ constraint check_positive_stock check (stock_quantity >= 0)
 create table orders(
 order_id int auto_increment primary key,
 customer_id int,
-order_data timestamp default current_timestamp,
+order_date timestamp default current_timestamp,
 total_amount decimal(10,2) not null,
 order_status enum("pending"),
 foreign key (customer_id) references customers(customer_id) on delete set null
